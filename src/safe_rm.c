@@ -3,6 +3,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include "../lib/config.h"
 
 int main(int argc, char *argv[]) {
     char trash_dir[512];
@@ -37,6 +38,11 @@ int main(int argc, char *argv[]) {
             return 1;
         }
         printf("Trash emptied successfully.\n");
+        return 0;
+    }
+
+    if (argc > 1 && strcmp(argv[1], "--version") == 0) {
+        printf("--- NGCU version %s --- \n", VERSION );
         return 0;
     }
 

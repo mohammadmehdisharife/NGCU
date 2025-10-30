@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "../lib/config.h"
 
 #define CLIP_FILE "/tmp/.clip"
 
@@ -13,6 +14,11 @@ int main(int argc, char *argv[]) {
         printf("Usage: clip [TEXT]\n");
         printf("Store TEXT in %s or read from STDIN if no arguments provided.\n", CLIP_FILE);
         printf("Cannot use both arguments and STDIN at the same time.\n");
+        return 0;
+    }
+
+    if (argc > 1 && strcmp(argv[1], "--version") == 0) {
+        printf("--- NGCU version %s --- \n", VERSION );
         return 0;
     }
 
