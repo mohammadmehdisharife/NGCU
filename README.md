@@ -97,7 +97,6 @@ This project is released under the **GNU General Public License v3 (GPLv3)**, co
 ## ✨ Roadmap
 
 - [ ] Add emoji removal to `pure`
-- [ ] Add `restore_rm` command to recover files from Trash
 - [ ] Add `clip --clear` option
 - [ ] Write man pages for each utility
 
